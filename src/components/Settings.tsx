@@ -105,8 +105,8 @@ export function Settings() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-gray-900">Settings</h1>
-        <p className="text-gray-500">Manage your organization settings</p>
+        <h1 className="text-white">Settings</h1>
+        <p className="text-white">Manage your organization settings</p>
       </div>
 
       <Tabs defaultValue="departments" className="w-full">
@@ -120,8 +120,8 @@ export function Settings() {
         <TabsContent value="departments" className="space-y-6 mt-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-gray-900">Departments</h2>
-              <p className="text-gray-500">Manage organizational departments</p>
+              <h2 className="text-white">Departments</h2>
+              <p className="text-white">Manage organizational departments</p>
             </div>
             {isAdmin && (
               <Dialog open={deptDialogOpen} onOpenChange={setDeptDialogOpen}>
@@ -188,20 +188,20 @@ export function Settings() {
                         <Building2 className="w-6 h-6 text-indigo-600" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-gray-900">{dept.name}</h3>
-                        <p className="text-gray-500">{dept.description}</p>
+                        <h3 className="text-white">{dept.name}</h3>
+                        <p className="text-white">{dept.description}</p>
                       </div>
                     </div>
                     
                     {head && (
                       <div className="mb-3">
-                        <p className="text-gray-500">Department Head</p>
-                        <p className="text-gray-900">{head.name}</p>
+                        <p className="text-white">Department Head</p>
+                        <p className="text-white">{head.name}</p>
                       </div>
                     )}
 
                     <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                      <span className="text-gray-600">{deptEmployees.length} employees</span>
+                      <span className="text-white">{deptEmployees.length} employees</span>
                       <Badge variant="secondary">Active</Badge>
                     </div>
                   </CardContent>
@@ -213,8 +213,8 @@ export function Settings() {
 
         <TabsContent value="roles" className="space-y-6 mt-6">
           <div>
-            <h2 className="text-gray-900">Roles & Permissions</h2>
-            <p className="text-gray-500">Configure user roles and access levels</p>
+            <h2 className="text-white">Roles & Permissions</h2>
+            <p className="text-white">Configure user roles and access levels</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -249,18 +249,18 @@ export function Settings() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1">
-                        <h3 className="text-gray-900">{role.name}</h3>
+                        <h3 className="text-white">{role.name}</h3>
                         <Badge className={role.color}>{role.count}</Badge>
                       </div>
-                      <p className="text-gray-500">{role.description}</p>
+                      <p className="text-white">{role.description}</p>
                     </div>
                   </div>
 
                   <div className="space-y-2 pt-3 border-t border-gray-100">
-                    <p className="text-gray-600">Permissions:</p>
+                    <p className="text-white">Permissions:</p>
                     <ul className="space-y-1">
                       {role.permissions.map((perm, idx) => (
-                        <li key={idx} className="text-gray-600 flex items-center">
+                        <li key={idx} className="text-white flex items-center">
                           <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2"></span>
                           {perm}
                         </li>
@@ -276,8 +276,8 @@ export function Settings() {
         <TabsContent value="policies" className="space-y-6 mt-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-gray-900">Company Policies</h2>
-              <p className="text-gray-500">Manage HR policies and documents</p>
+              <h2 className="text-white">Company Policies</h2>
+              <p className="text-white">Manage HR policies and documents</p>
             </div>
             {isAdmin && (
               <Button>
@@ -323,11 +323,11 @@ export function Settings() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-2 mb-1">
-                          <h3 className="text-gray-900">{policy.title}</h3>
+                          <h3 className="text-white">{policy.title}</h3>
                           <Badge variant="secondary">{policy.category}</Badge>
                         </div>
-                        <p className="text-gray-600">{policy.description}</p>
-                        <p className="text-gray-500 mt-2">
+                        <p className="text-white">{policy.description}</p>
+                        <p className="text-white mt-2">
                           Last updated: {policy.lastUpdated}
                         </p>
                       </div>
@@ -342,8 +342,8 @@ export function Settings() {
 
         <TabsContent value="general" className="space-y-6 mt-6">
           <div>
-            <h2 className="text-gray-900">General Settings</h2>
-            <p className="text-gray-500">Configure system-wide settings</p>
+            <h2 className="text-white">General Settings</h2>
+            <p className="text-white">Configure system-wide settings</p>
           </div>
 
           <div className="space-y-6">

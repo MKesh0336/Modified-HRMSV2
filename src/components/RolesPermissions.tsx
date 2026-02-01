@@ -140,7 +140,7 @@ export function RolesPermissions() {
     return (
       <Card>
         <CardContent className="flex items-center justify-center p-12">
-          <p className="text-gray-500">Access denied: Admin only</p>
+          <p className="text-white">Access denied: Admin only</p>
         </CardContent>
       </Card>
     );
@@ -160,14 +160,14 @@ export function RolesPermissions() {
       'manager': 'bg-blue-100 text-blue-800',
       'employee': 'bg-green-100 text-green-800'
     };
-    return colors[role] || 'bg-gray-100 text-gray-800';
+    return colors[role] || 'bg-gray-100 text-white';
   };
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-gray-900">Roles & Permissions</h1>
-        <p className="text-gray-500">Manage custom permissions for users</p>
+        <h1 className="text-white">Roles & Permissions</h1>
+        <p className="text-white">Manage custom permissions for users</p>
       </div>
 
       <Card>
@@ -185,8 +185,8 @@ export function RolesPermissions() {
                       <User className="w-5 h-5 text-indigo-600" />
                     </div>
                     <div>
-                      <p className="text-gray-900">{employee.name}</p>
-                      <p className="text-gray-500">{employee.email}</p>
+                      <p className="text-white">{employee.name}</p>
+                      <p className="text-white">{employee.email}</p>
                       <div className="flex gap-2 mt-1">
                         <Badge className={getRoleBadge(employee.role)}>
                           {employee.role.charAt(0).toUpperCase() + employee.role.slice(1)}
@@ -233,8 +233,8 @@ export function RolesPermissions() {
                                   onCheckedChange={() => togglePermission(perm.id)}
                                 />
                                 <div className="flex-1">
-                                  <p className="text-gray-900">{perm.label}</p>
-                                  <p className="text-gray-500">{perm.description}</p>
+                                  <p className="text-white">{perm.label}</p>
+                                  <p className="text-white">{perm.description}</p>
                                 </div>
                               </div>
                             ))}
@@ -269,16 +269,16 @@ export function RolesPermissions() {
         <CardContent>
           <div className="space-y-4">
             <div>
-              <h3 className="text-gray-900 mb-2">Admin</h3>
-              <p className="text-gray-600">Full access to all modules and features</p>
+              <h3 className="text-white mb-2">Admin</h3>
+              <p className="text-white">Full access to all modules and features</p>
             </div>
             <div>
-              <h3 className="text-gray-900 mb-2">Manager</h3>
-              <p className="text-gray-600">Can manage employees in their department, view reports for their department, review performance</p>
+              <h3 className="text-white mb-2">Manager</h3>
+              <p className="text-white">Can manage employees in their department, view reports for their department, review performance</p>
             </div>
             <div>
-              <h3 className="text-gray-900 mb-2">Employee</h3>
-              <p className="text-gray-600">Can mark attendance, apply for leave, view own records</p>
+              <h3 className="text-white mb-2">Employee</h3>
+              <p className="text-white">Can mark attendance, apply for leave, view own records</p>
             </div>
           </div>
         </CardContent>

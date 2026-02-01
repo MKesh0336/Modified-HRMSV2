@@ -84,8 +84,8 @@ export function EmployeeDirectory({ onViewProfile, onAddEmployee }: { onViewProf
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-gray-900">Employee Directory</h1>
-          <p className="text-gray-500">{employees.length} total employees</p>
+          <h1 className="text-white">Employee Directory</h1>
+          <p className="text-white">{employees.length} total employees</p>
         </div>
         {isAdmin && (
           <Button onClick={onAddEmployee}>
@@ -97,7 +97,7 @@ export function EmployeeDirectory({ onViewProfile, onAddEmployee }: { onViewProf
 
       <div className="flex items-center space-x-4">
         <div className="flex-1 relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white w-5 h-5" />
           <Input
             placeholder="Search employees..."
             value={searchQuery}
@@ -139,8 +139,8 @@ export function EmployeeDirectory({ onViewProfile, onAddEmployee }: { onViewProf
                   </Avatar>
                   
                   <div className="space-y-1">
-                    <h3 className="text-gray-900">{employee.name}</h3>
-                    <p className="text-gray-500">
+                    <h3 className="text-white">{employee.name}</h3>
+                    <p className="text-white">
                       {employee.jobTitle || 'Employee'}
                     </p>
                     {employee.department && (
@@ -149,12 +149,12 @@ export function EmployeeDirectory({ onViewProfile, onAddEmployee }: { onViewProf
                   </div>
 
                   <div className="w-full space-y-2 pt-2 border-t border-gray-100">
-                    <div className="flex items-center text-gray-600 space-x-2">
+                    <div className="flex items-center text-white space-x-2">
                       <Mail className="w-4 h-4" />
                       <span className="truncate">{employee.email}</span>
                     </div>
                     {employee.phoneNumber && (
-                      <div className="flex items-center text-gray-600 space-x-2">
+                      <div className="flex items-center text-white space-x-2">
                         <Phone className="w-4 h-4" />
                         <span>{employee.phoneNumber}</span>
                       </div>
@@ -179,12 +179,12 @@ export function EmployeeDirectory({ onViewProfile, onAddEmployee }: { onViewProf
               <table className="w-full">
                 <thead className="bg-gray-50 border-b border-gray-200">
                   <tr>
-                    <th className="px-6 py-3 text-left text-gray-600">Employee</th>
-                    <th className="px-6 py-3 text-left text-gray-600">Job Title</th>
-                    <th className="px-6 py-3 text-left text-gray-600">Department</th>
-                    <th className="px-6 py-3 text-left text-gray-600">Email</th>
-                    <th className="px-6 py-3 text-left text-gray-600">Phone</th>
-                    <th className="px-6 py-3 text-left text-gray-600">Status</th>
+                    <th className="px-6 py-3 text-left text-white">Employee</th>
+                    <th className="px-6 py-3 text-left text-white">Job Title</th>
+                    <th className="px-6 py-3 text-left text-white">Department</th>
+                    <th className="px-6 py-3 text-left text-white">Email</th>
+                    <th className="px-6 py-3 text-left text-white">Phone</th>
+                    <th className="px-6 py-3 text-left text-white">Status</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
@@ -202,21 +202,21 @@ export function EmployeeDirectory({ onViewProfile, onAddEmployee }: { onViewProf
                               {getInitials(employee.name)}
                             </AvatarFallback>
                           </Avatar>
-                          <span className="text-gray-900">{employee.name}</span>
+                          <span className="text-white">{employee.name}</span>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-gray-600">
+                      <td className="px-6 py-4 text-white">
                         {employee.jobTitle || '-'}
                       </td>
                       <td className="px-6 py-4">
                         {employee.department ? (
                           <Badge variant="secondary">{employee.department}</Badge>
                         ) : (
-                          <span className="text-gray-400">-</span>
+                          <span className="text-white">-</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-gray-600">{employee.email}</td>
-                      <td className="px-6 py-4 text-gray-600">
+                      <td className="px-6 py-4 text-white">{employee.email}</td>
+                      <td className="px-6 py-4 text-white">
                         {employee.phoneNumber || '-'}
                       </td>
                       <td className="px-6 py-4">

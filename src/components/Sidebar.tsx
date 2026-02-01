@@ -81,7 +81,7 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
             <img src={logo} alt="Al Faiz Multinational Group" className="w-12 h-12 object-contain" />
             <div>
               <h1 className="text-[#d4af37] font-bold">Al Faiz MNG</h1>
-              <p className="text-xs text-gray-400">HRMS System</p>
+              <p className="text-xs text-white">HRMS System</p>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
                 className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                   isActive
                     ? 'bg-[#d4af37] text-black'
-                    : 'text-gray-300 hover:bg-[#1a1a1a] hover:text-[#d4af37]'
+                    : 'text-white hover:bg-[#1a1a1a] hover:text-[#d4af37]'
                 }`}
               >
                 <Icon className="w-5 h-5" />
@@ -114,9 +114,9 @@ export function Sidebar({ currentPage, onNavigate }: SidebarProps) {
         <div className="p-4 border-t border-[#d4af37]/20">
           <div className="px-4 py-3 bg-[#1a1a1a] rounded-lg mb-2 border border-[#d4af37]/10">
             <p className="text-[#d4af37] font-medium text-sm">{user?.employee?.name || user?.name}</p>
-            <p className="text-gray-400 text-xs capitalize">{user?.employee?.role || 'employee'}</p>
+            <p className="text-white text-xs capitalize">{user?.employee?.role || 'employee'}</p>
             {user?.employee?.department && (
-              <p className="text-gray-500 text-xs mt-1">{user.employee.department}</p>
+              <p className="text-white text-xs mt-1">{user.employee.department}</p>
             )}
           </div>
           <button

@@ -169,14 +169,14 @@ export function PaymentsModule() {
       'custom': 'bg-purple-100 text-purple-800',
       'final_settlement': 'bg-red-100 text-red-800'
     };
-    return colors[type] || 'bg-gray-100 text-gray-800';
+    return colors[type] || 'bg-gray-100 text-white';
   };
 
   if (!isAdmin) {
     return (
       <Card>
         <CardContent className="flex items-center justify-center p-12">
-          <p className="text-gray-500">Access denied: Admin only</p>
+          <p className="text-white">Access denied: Admin only</p>
         </CardContent>
       </Card>
     );
@@ -201,8 +201,8 @@ export function PaymentsModule() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-gray-900">Payments Module</h1>
-          <p className="text-gray-500">Manage employee payments, advances, and settlements</p>
+          <h1 className="text-white">Payments Module</h1>
+          <p className="text-white">Manage employee payments, advances, and settlements</p>
         </div>
         
         <Dialog open={showAddPayment} onOpenChange={setShowAddPayment}>
@@ -315,19 +315,19 @@ export function PaymentsModule() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-200">
-                  <th className="text-left p-3 text-gray-600">Date</th>
-                  <th className="text-left p-3 text-gray-600">Employee</th>
-                  <th className="text-left p-3 text-gray-600">Department</th>
-                  <th className="text-left p-3 text-gray-600">Type</th>
-                  <th className="text-left p-3 text-gray-600">Amount</th>
-                  <th className="text-left p-3 text-gray-600">Month</th>
-                  <th className="text-left p-3 text-gray-600">Description</th>
+                  <th className="text-left p-3 text-white">Date</th>
+                  <th className="text-left p-3 text-white">Employee</th>
+                  <th className="text-left p-3 text-white">Department</th>
+                  <th className="text-left p-3 text-white">Type</th>
+                  <th className="text-left p-3 text-white">Amount</th>
+                  <th className="text-left p-3 text-white">Month</th>
+                  <th className="text-left p-3 text-white">Description</th>
                 </tr>
               </thead>
               <tbody>
                 {payments.length === 0 ? (
                   <tr>
-                    <td colSpan={7} className="text-center p-8 text-gray-500">
+                    <td colSpan={7} className="text-center p-8 text-white">
                       No payments recorded
                     </td>
                   </tr>
@@ -346,7 +346,7 @@ export function PaymentsModule() {
                       </td>
                       <td className="p-3">${payment.amount.toLocaleString()}</td>
                       <td className="p-3">{payment.month}</td>
-                      <td className="p-3 text-gray-600">{payment.description || '-'}</td>
+                      <td className="p-3 text-white">{payment.description || '-'}</td>
                     </tr>
                   ))
                 )}

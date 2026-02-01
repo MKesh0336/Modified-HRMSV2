@@ -307,8 +307,8 @@ export function Reports() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-gray-900">Reports & Analytics</h1>
-        <p className="text-gray-500">View payroll, attendance, and location tracking reports</p>
+        <h1 className="text-white">Reports & Analytics</h1>
+        <p className="text-white">View payroll, attendance, and location tracking reports</p>
       </div>
 
       {/* Filters */}
@@ -422,8 +422,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Total Payrolls</p>
-                    <p className="text-gray-900 mt-1">{getFilteredPayrolls().length}</p>
+                    <p className="text-white">Total Payrolls</p>
+                    <p className="text-white mt-1">{getFilteredPayrolls().length}</p>
                   </div>
                   <FileText className="w-8 h-8 text-indigo-600" />
                 </div>
@@ -434,8 +434,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Total Paid</p>
-                    <p className="text-gray-900 mt-1">
+                    <p className="text-white">Total Paid</p>
+                    <p className="text-white mt-1">
                       {formatCurrency(
                         getFilteredPayrolls()
                           .filter(p => p.status === 'paid')
@@ -452,8 +452,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Total Pending</p>
-                    <p className="text-gray-900 mt-1">
+                    <p className="text-white">Total Pending</p>
+                    <p className="text-white mt-1">
                       {formatCurrency(
                         getFilteredPayrolls()
                           .filter(p => p.status === 'approved')
@@ -470,8 +470,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Avg. Salary</p>
-                    <p className="text-gray-900 mt-1">
+                    <p className="text-white">Avg. Salary</p>
+                    <p className="text-white mt-1">
                       {formatCurrency(
                         getFilteredPayrolls().length > 0
                           ? getFilteredPayrolls().reduce((sum, p) => sum + p.netSalary, 0) / getFilteredPayrolls().length
@@ -518,8 +518,8 @@ export function Reports() {
                       <tr key={payroll.id} className="border-b hover:bg-gray-50">
                         <td className="py-3 px-4">
                           <div>
-                            <p className="text-gray-900">{getEmployeeName(payroll.employeeId)}</p>
-                            <p className="text-gray-500">{payroll.employeeId.substring(0, 8)}...</p>
+                            <p className="text-white">{getEmployeeName(payroll.employeeId)}</p>
+                            <p className="text-white">{payroll.employeeId.substring(0, 8)}...</p>
                           </div>
                         </td>
                         <td className="py-3 px-4">
@@ -531,7 +531,7 @@ export function Reports() {
                         <td className="text-right py-3 px-4">{formatCurrency(payroll.baseSalary)}</td>
                         <td className="text-right py-3 px-4 text-green-600">
                           +{formatCurrency(payroll.overtimeAmount)}
-                          <span className="text-gray-500 ml-1">({payroll.overtimeHours}h)</span>
+                          <span className="text-white ml-1">({payroll.overtimeHours}h)</span>
                         </td>
                         <td className="text-right py-3 px-4 text-red-600">
                           -{formatCurrency(payroll.lateDeduction + payroll.earlyCheckoutDeduction)}
@@ -558,7 +558,7 @@ export function Reports() {
                 </table>
                 
                 {getFilteredPayrolls().length === 0 && (
-                  <div className="text-center py-8 text-gray-500">
+                  <div className="text-center py-8 text-white">
                     No payroll records found
                   </div>
                 )}
@@ -574,8 +574,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Total Days</p>
-                    <p className="text-gray-900 mt-1">{monthlyStats.totalDays}</p>
+                    <p className="text-white">Total Days</p>
+                    <p className="text-white mt-1">{monthlyStats.totalDays}</p>
                   </div>
                   <Calendar className="w-8 h-8 text-indigo-600" />
                 </div>
@@ -586,8 +586,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Present</p>
-                    <p className="text-gray-900 mt-1">{monthlyStats.presentDays}</p>
+                    <p className="text-white">Present</p>
+                    <p className="text-white mt-1">{monthlyStats.presentDays}</p>
                   </div>
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
@@ -598,8 +598,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Absent</p>
-                    <p className="text-gray-900 mt-1">{monthlyStats.absentDays}</p>
+                    <p className="text-white">Absent</p>
+                    <p className="text-white mt-1">{monthlyStats.absentDays}</p>
                   </div>
                   <XCircle className="w-8 h-8 text-red-600" />
                 </div>
@@ -610,8 +610,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Total Hours</p>
-                    <p className="text-gray-900 mt-1">{monthlyStats.totalHours.toFixed(1)}h</p>
+                    <p className="text-white">Total Hours</p>
+                    <p className="text-white mt-1">{monthlyStats.totalHours.toFixed(1)}h</p>
                   </div>
                   <Clock className="w-8 h-8 text-blue-600" />
                 </div>
@@ -622,8 +622,8 @@ export function Reports() {
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-500">Avg. Hours/Day</p>
-                    <p className="text-gray-900 mt-1">{monthlyStats.avgHours.toFixed(1)}h</p>
+                    <p className="text-white">Avg. Hours/Day</p>
+                    <p className="text-white mt-1">{monthlyStats.avgHours.toFixed(1)}h</p>
                   </div>
                   <TrendingUp className="w-8 h-8 text-purple-600" />
                 </div>
@@ -665,7 +665,7 @@ export function Reports() {
                       <tr key={record.id} className="border-b hover:bg-gray-50">
                         {isAdmin && (
                           <td className="py-3 px-4">
-                            <p className="text-gray-900">{getEmployeeName(record.employeeId)}</p>
+                            <p className="text-white">{getEmployeeName(record.employeeId)}</p>
                           </td>
                         )}
                         <td className="py-3 px-4">{formatDate(record.date)}</td>
@@ -693,7 +693,7 @@ export function Reports() {
                               <MapPin className="w-4 h-4 text-indigo-600" />
                             </Button>
                           ) : (
-                            <span className="text-gray-400">-</span>
+                            <span className="text-white">-</span>
                           )}
                         </td>
                         <td className="text-center py-3 px-4">
@@ -709,7 +709,7 @@ export function Reports() {
                 </table>
                 
                 {getFilteredAttendance().length === 0 && (
-                  <div className="text-center py-8 text-gray-500">
+                  <div className="text-center py-8 text-white">
                     No attendance records found
                   </div>
                 )}
@@ -785,7 +785,7 @@ export function Reports() {
               </div>
 
               {selectedEmployee === 'all' && (
-                <div className="text-center py-8 text-gray-500">
+                <div className="text-center py-8 text-white">
                   Please select an employee to view GPS tracking data
                 </div>
               )}
@@ -807,20 +807,20 @@ export function Reports() {
                             </CardHeader>
                             <CardContent className="space-y-2">
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Time:</span>
-                                <span className="text-gray-900">{formatTime(attendance.checkIn)}</span>
+                                <span className="text-white">Time:</span>
+                                <span className="text-white">{formatTime(attendance.checkIn)}</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Latitude:</span>
-                                <span className="text-gray-900">{attendance.checkInLat.toFixed(6)}</span>
+                                <span className="text-white">Latitude:</span>
+                                <span className="text-white">{attendance.checkInLat.toFixed(6)}</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Longitude:</span>
-                                <span className="text-gray-900">{attendance.checkInLng.toFixed(6)}</span>
+                                <span className="text-white">Longitude:</span>
+                                <span className="text-white">{attendance.checkInLng.toFixed(6)}</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Location:</span>
-                                <span className="text-gray-900">{attendance.location}</span>
+                                <span className="text-white">Location:</span>
+                                <span className="text-white">{attendance.location}</span>
                               </div>
                               <Button
                                 variant="outline"
@@ -849,20 +849,20 @@ export function Reports() {
                             </CardHeader>
                             <CardContent className="space-y-2">
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Time:</span>
-                                <span className="text-gray-900">{formatTime(attendance.checkOut)}</span>
+                                <span className="text-white">Time:</span>
+                                <span className="text-white">{formatTime(attendance.checkOut)}</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Latitude:</span>
-                                <span className="text-gray-900">{attendance.checkOutLat.toFixed(6)}</span>
+                                <span className="text-white">Latitude:</span>
+                                <span className="text-white">{attendance.checkOutLat.toFixed(6)}</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Longitude:</span>
-                                <span className="text-gray-900">{attendance.checkOutLng.toFixed(6)}</span>
+                                <span className="text-white">Longitude:</span>
+                                <span className="text-white">{attendance.checkOutLng.toFixed(6)}</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-600">Location:</span>
-                                <span className="text-gray-900">{attendance.location}</span>
+                                <span className="text-white">Location:</span>
+                                <span className="text-white">{attendance.location}</span>
                               </div>
                               <Button
                                 variant="outline"
@@ -978,8 +978,8 @@ export function Reports() {
                       <tr key={settlement.id} className="border-b hover:bg-gray-50">
                         <td className="py-3 px-4">
                           <div>
-                            <p className="text-gray-900">{settlement.employeeName}</p>
-                            <p className="text-gray-500">{settlement.employeeId.substring(0, 8)}...</p>
+                            <p className="text-white">{settlement.employeeName}</p>
+                            <p className="text-white">{settlement.employeeId.substring(0, 8)}...</p>
                           </div>
                         </td>
                         <td className="py-3 px-4">{settlement.department}</td>
@@ -1015,7 +1015,7 @@ export function Reports() {
                 </table>
                 
                 {settlements.length === 0 && (
-                  <div className="text-center py-8 text-gray-500">
+                  <div className="text-center py-8 text-white">
                     No final settlements found
                   </div>
                 )}

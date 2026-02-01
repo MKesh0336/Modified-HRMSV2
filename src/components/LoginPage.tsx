@@ -36,7 +36,7 @@ export function LoginPage({ onSwitchToRegister }: { onSwitchToRegister: () => vo
             <img src={logo} alt="Al Faiz Multinational Group" className="w-20 h-20 object-contain" />
           </div>
           <CardTitle className="text-center text-[#d4af37]">Al Faiz Multinational Group</CardTitle>
-          <CardDescription className="text-center text-gray-400">
+          <CardDescription className="text-center text-white">
             HRMS System - Sign in to your account
           </CardDescription>
         </CardHeader>
@@ -49,7 +49,7 @@ export function LoginPage({ onSwitchToRegister }: { onSwitchToRegister: () => vo
             )}
             
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-gray-300">Email</Label>
+              <Label htmlFor="email" className="text-white">Email</Label>
               <Input
                 id="email"
                 type="email"
@@ -57,12 +57,12 @@ export function LoginPage({ onSwitchToRegister }: { onSwitchToRegister: () => vo
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-[#0a0a0a] border-[#d4af37]/30 text-gray-300 placeholder:text-gray-600"
+                className="bg-[#0a0a0a] border-[#d4af37]/30 text-white placeholder:text-white"
               />
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-gray-300">Password</Label>
+              <Label htmlFor="password" className="text-white">Password</Label>
               <Input
                 id="password"
                 type="password"
@@ -70,7 +70,7 @@ export function LoginPage({ onSwitchToRegister }: { onSwitchToRegister: () => vo
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="bg-[#0a0a0a] border-[#d4af37]/30 text-gray-300 placeholder:text-gray-600"
+                className="bg-[#0a0a0a] border-[#d4af37]/30 text-white placeholder:text-white"
               />
             </div>
 
@@ -79,13 +79,13 @@ export function LoginPage({ onSwitchToRegister }: { onSwitchToRegister: () => vo
             </Button>
 
             <div className="text-center space-y-2">
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-white">
                 First time setup?{' '}
                 <a href="/setup" className="text-[#d4af37] hover:text-[#b8941f] font-medium">
                   Create Admin Account
                 </a>
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-white">
                 Contact your administrator if you need access
               </p>
             </div>

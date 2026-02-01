@@ -162,12 +162,12 @@ export function PerformanceReview() {
             className={`w-5 h-5 ${
               star <= rating
                 ? 'fill-yellow-400 text-yellow-400'
-                : 'text-gray-300'
+                : 'text-white'
             }`}
           />
         </button>
       ))}
-      <span className="ml-2 text-gray-600">{rating}/5</span>
+      <span className="ml-2 text-white">{rating}/5</span>
     </div>
   );
 
@@ -189,8 +189,8 @@ export function PerformanceReview() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-gray-900">Performance Reviews</h1>
-          <p className="text-gray-500">Track employee performance and development</p>
+          <h1 className="text-white">Performance Reviews</h1>
+          <p className="text-white">Track employee performance and development</p>
         </div>
         {isManager && (
           <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -243,7 +243,7 @@ export function PerformanceReview() {
                   <div className="space-y-3">
                     {Object.keys(formData.ratings).map((category) => (
                       <div key={category} className="flex items-center justify-between">
-                        <span className="text-gray-700 capitalize">{category}</span>
+                        <span className="text-white capitalize">{category}</span>
                         <RatingStars
                           rating={formData.ratings[category as keyof typeof formData.ratings]}
                           onRatingChange={(value: number) => updateRating(category as keyof typeof formData.ratings, value)}
@@ -302,8 +302,8 @@ export function PerformanceReview() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Total Reviews</p>
-                <p className="text-gray-900">{reviews.length}</p>
+                <p className="text-white">Total Reviews</p>
+                <p className="text-white">{reviews.length}</p>
               </div>
               <Star className="w-8 h-8 text-yellow-500" />
             </div>
@@ -313,8 +313,8 @@ export function PerformanceReview() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Average Rating</p>
-                <p className="text-gray-900">{avgOverallRating.toFixed(1)}/5</p>
+                <p className="text-white">Average Rating</p>
+                <p className="text-white">{avgOverallRating.toFixed(1)}/5</p>
               </div>
               <TrendingUp className="w-8 h-8 text-green-500" />
             </div>
@@ -324,8 +324,8 @@ export function PerformanceReview() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">This Year</p>
-                <p className="text-gray-900">{reviews.length} reviews</p>
+                <p className="text-white">This Year</p>
+                <p className="text-white">{reviews.length} reviews</p>
               </div>
               <TrendingUp className="w-8 h-8 text-indigo-500" />
             </div>
@@ -346,8 +346,8 @@ export function PerformanceReview() {
                   return (
                     <div key={category}>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-gray-700 capitalize">{category}</span>
-                        <span className="text-gray-900">{avg.toFixed(1)}/5</span>
+                        <span className="text-white capitalize">{category}</span>
+                        <span className="text-white">{avg.toFixed(1)}/5</span>
                       </div>
                       <Progress value={avg * 20} className="h-2" />
                     </div>
@@ -355,7 +355,7 @@ export function PerformanceReview() {
                 })}
               </div>
             ) : (
-              <p className="text-gray-500 text-center py-8">No reviews yet</p>
+              <p className="text-white text-center py-8">No reviews yet</p>
             )}
           </CardContent>
         </Card>
@@ -373,20 +373,20 @@ export function PerformanceReview() {
                     <div key={review.id} className="p-4 border border-gray-200 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <div>
-                          <p className="text-gray-900">{employee?.name}</p>
-                          <p className="text-gray-500">{review.period}</p>
+                          <p className="text-white">{employee?.name}</p>
+                          <p className="text-white">{review.period}</p>
                         </div>
                         <div className="flex items-center space-x-1">
                           <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                          <span className="text-gray-900">{review.overallRating}</span>
+                          <span className="text-white">{review.overallRating}</span>
                         </div>
                       </div>
-                      <p className="text-gray-600 line-clamp-2">{review.strengths}</p>
+                      <p className="text-white line-clamp-2">{review.strengths}</p>
                     </div>
                   );
                 })
               ) : (
-                <p className="text-gray-500 text-center py-8">No reviews yet</p>
+                <p className="text-white text-center py-8">No reviews yet</p>
               )}
             </div>
           </CardContent>
@@ -405,15 +405,15 @@ export function PerformanceReview() {
                 <div key={review.id} className="p-6 border border-gray-200 rounded-lg">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-gray-900">{employee?.name}</h3>
-                      <p className="text-gray-500">{review.period}</p>
+                      <h3 className="text-white">{employee?.name}</h3>
+                      <p className="text-white">{review.period}</p>
                     </div>
                     <div className="text-right">
                       <div className="flex items-center space-x-1">
                         <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                        <span className="text-gray-900">{review.overallRating}/5</span>
+                        <span className="text-white">{review.overallRating}/5</span>
                       </div>
-                      <p className="text-gray-500">
+                      <p className="text-white">
                         {new Date(review.createdAt).toLocaleDateString()}
                       </p>
                     </div>
@@ -422,24 +422,24 @@ export function PerformanceReview() {
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
                     {Object.entries(review.ratings).map(([category, rating]) => (
                       <div key={category} className="text-center p-3 bg-gray-50 rounded-lg">
-                        <p className="text-gray-600 capitalize mb-1">{category}</p>
-                        <p className="text-gray-900">{rating}/5</p>
+                        <p className="text-white capitalize mb-1">{category}</p>
+                        <p className="text-white">{rating}/5</p>
                       </div>
                     ))}
                   </div>
 
                   <div className="space-y-4">
                     <div>
-                      <Label className="text-gray-700">Strengths</Label>
-                      <p className="text-gray-600 mt-1">{review.strengths}</p>
+                      <Label className="text-white">Strengths</Label>
+                      <p className="text-white mt-1">{review.strengths}</p>
                     </div>
                     <div>
-                      <Label className="text-gray-700">Areas for Improvement</Label>
-                      <p className="text-gray-600 mt-1">{review.improvements}</p>
+                      <Label className="text-white">Areas for Improvement</Label>
+                      <p className="text-white mt-1">{review.improvements}</p>
                     </div>
                     <div>
-                      <Label className="text-gray-700">Goals</Label>
-                      <p className="text-gray-600 mt-1">{review.goals}</p>
+                      <Label className="text-white">Goals</Label>
+                      <p className="text-white mt-1">{review.goals}</p>
                     </div>
                   </div>
                 </div>
