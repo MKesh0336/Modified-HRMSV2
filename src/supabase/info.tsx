@@ -1,3 +1,4 @@
+// NEW Supabase Project - All traffic goes here
 export const projectId = 'hikyzijvoqkrueiutzhb';
 export const supabaseUrl = 'https://hikyzijvoqkrueiutzhb.supabase.co';
 export const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpa3l6aWp2b3FrcnVlaXV0emhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk5NTE4MTAsImV4cCI6MjA4NTUyNzgxMH0.uOVH-_7egg2cjYwh6w_eRq0nwbBzbEDi9gbc-XbsG_g';
