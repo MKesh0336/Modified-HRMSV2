@@ -109,8 +109,8 @@ export function Dashboard({ onNavigate }: DashboardProps) {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-gray-900">Dashboard</h1>
-        <p className="text-gray-500">Welcome back! Here's what's happening today.</p>
+        <h1 className="text-white">Dashboard</h1>
+        <p className="text-white">Welcome back! Here's what's happening today.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -119,14 +119,14 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           return (
             <Card key={index}>
               <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <CardTitle className="text-gray-600">{stat.title}</CardTitle>
+                <CardTitle className="text-white">{stat.title}</CardTitle>
                 <div className={`${stat.color} p-2 rounded-lg`}>
                   <Icon className="w-5 h-5 text-white" />
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-gray-900">{stat.value}</div>
-                <p className="text-gray-500 mt-1">{stat.trend}</p>
+                <div className="text-white">{stat.value}</div>
+                <p className="text-white mt-1">{stat.trend}</p>
               </CardContent>
             </Card>
           );
@@ -149,8 +149,8 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                 <div key={index} className="flex items-start space-x-3 pb-3 border-b border-gray-100 last:border-0">
                   <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2"></div>
                   <div className="flex-1">
-                    <p className="text-gray-900">{activity.action}</p>
-                    <p className="text-gray-500">{activity.time}</p>
+                    <p className="text-white">{activity.action}</p>
+                    <p className="text-white">{activity.time}</p>
                   </div>
                 </div>
               ))}
@@ -169,28 +169,28 @@ export function Dashboard({ onNavigate }: DashboardProps) {
                 className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-indigo-50 hover:border-indigo-300 transition-colors"
               >
                 <Users className="w-6 h-6 text-indigo-600 mb-2" />
-                <span className="text-gray-700">Add Employee</span>
+                <span className="text-white">Add Employee</span>
               </button>
               <button
                 onClick={() => onNavigate?.('attendance')}
                 className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-indigo-50 hover:border-indigo-300 transition-colors"
               >
                 <Calendar className="w-6 h-6 text-indigo-600 mb-2" />
-                <span className="text-gray-700">Mark Attendance</span>
+                <span className="text-white">Mark Attendance</span>
               </button>
               <button
                 onClick={() => onNavigate?.('leaves')}
                 className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-indigo-50 hover:border-indigo-300 transition-colors"
               >
                 <FileText className="w-6 h-6 text-indigo-600 mb-2" />
-                <span className="text-gray-700">Review Leaves</span>
+                <span className="text-white">Review Leaves</span>
               </button>
               <button
                 onClick={() => onNavigate?.('recruitment')}
                 className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:bg-indigo-50 hover:border-indigo-300 transition-colors"
               >
                 <Briefcase className="w-6 h-6 text-indigo-600 mb-2" />
-                <span className="text-gray-700">Post Job</span>
+                <span className="text-white">Post Job</span>
               </button>
             </div>
           </CardContent>

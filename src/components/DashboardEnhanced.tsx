@@ -283,11 +283,11 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
       <div className="flex items-center justify-between border-b border-[#d4af37]/20 pb-4">
         <div>
           <h1 className="text-[#d4af37]">Dashboard</h1>
-          <p className="text-gray-400">Welcome back, {user?.employee?.name}! Here's what's happening today.</p>
+          <p className="text-white">Welcome back, {user?.employee?.name}! Here's what's happening today.</p>
         </div>
         <div className="text-right">
           <p className="text-[#d4af37] font-medium">Al Faiz Multinational Group</p>
-          <p className="text-sm text-gray-400">HRMS System</p>
+          <p className="text-sm text-white">HRMS System</p>
         </div>
       </div>
 
@@ -298,7 +298,7 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
           return (
             <Card key={index} className="bg-[#1a1a1a] border-[#d4af37]/20">
               <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <CardTitle className="text-gray-300 text-sm">{stat.title}</CardTitle>
+                <CardTitle className="text-white text-sm">{stat.title}</CardTitle>
                 <div className={`${stat.color} p-2 rounded-lg`}>
                   <Icon className="w-5 h-5 text-black" />
                 </div>
@@ -324,8 +324,8 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
             <div className="space-y-3">
               {myWishes.slice(0, 5).map((wish, index) => (
                 <div key={index} className="p-3 bg-pink-900/20 rounded-lg border border-pink-500/30">
-                  <p className="text-gray-300"><strong className="text-[#d4af37]">{wish.fromName}:</strong> {wish.message}</p>
-                  <p className="text-gray-500 text-sm mt-1">{formatTimeAgo(wish.timestamp)}</p>
+                  <p className="text-white"><strong className="text-[#d4af37]">{wish.fromName}:</strong> {wish.message}</p>
+                  <p className="text-white text-sm mt-1">{formatTimeAgo(wish.timestamp)}</p>
                 </div>
               ))}
             </div>
@@ -343,20 +343,20 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
             <CardContent>
               <div className="space-y-4 max-h-96 overflow-y-auto">
                 {activities.length === 0 ? (
-                  <p className="text-gray-500">No recent activities</p>
+                  <p className="text-white">No recent activities</p>
                 ) : (
                   activities.slice(0, 10).map((activity, index) => (
                     <div key={index} className="flex items-start space-x-3 pb-3 border-b border-[#d4af37]/10 last:border-0">
                       <div className="w-2 h-2 bg-[#d4af37] rounded-full mt-2"></div>
                       <div className="flex-1">
-                        <p className="text-gray-300">
+                        <p className="text-white">
                           <strong className="text-[#d4af37]">{activity.actorName}</strong> - {getActionLabel(activity.action)}
-                          {activity.targetName && <span className="text-gray-400"> ({activity.targetName})</span>}
+                          {activity.targetName && <span className="text-white"> ({activity.targetName})</span>}
                         </p>
                         {activity.department && (
                           <Badge variant="outline" className="mt-1 border-[#d4af37]/30 text-[#d4af37]">{activity.department}</Badge>
                         )}
-                        <p className="text-gray-500 text-sm mt-1">{formatTimeAgo(activity.timestamp)}</p>
+                        <p className="text-white text-sm mt-1">{formatTimeAgo(activity.timestamp)}</p>
                       </div>
                     </div>
                   ))
@@ -377,14 +377,14 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
           <CardContent>
             <div className="space-y-3">
               {birthdays.length === 0 ? (
-                <p className="text-gray-500">No birthdays this month</p>
+                <p className="text-white">No birthdays this month</p>
               ) : (
                 birthdays.map((birthday, index) => (
                   <div key={index} className={`p-3 rounded-lg border ${birthday.isToday ? 'bg-pink-900/30 border-pink-500/50' : 'bg-[#0a0a0a] border-[#d4af37]/10'}`}>
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-[#d4af37] font-medium">{birthday.name}</p>
-                        <p className="text-gray-400 text-sm">{birthday.department}</p>
+                        <p className="text-white text-sm">{birthday.department}</p>
                         {birthday.isToday && <Badge className="mt-1 bg-pink-600 text-white">Today!</Badge>}
                       </div>
                       <Dialog>
@@ -408,7 +408,7 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
                               value={wishMessage}
                               onChange={(e) => setWishMessage(e.target.value)}
                               rows={4}
-                              className="bg-[#0a0a0a] border-[#d4af37]/20 text-gray-300"
+                              className="bg-[#0a0a0a] border-[#d4af37]/20 text-white"
                             />
                             <Button onClick={sendBirthdayWish} className="w-full bg-[#d4af37] text-black hover:bg-[#b8941f]">
                               <Cake className="w-4 h-4 mr-2" />
@@ -440,11 +440,11 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
                   <div key={index} className="flex items-center justify-between p-2 bg-emerald-900/20 rounded border border-emerald-500/30">
                     <div>
                       <p className="text-[#d4af37] font-medium">{emp.employeeName}</p>
-                      <p className="text-gray-400 text-sm">{emp.employeeDepartment}</p>
+                      <p className="text-white text-sm">{emp.employeeDepartment}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-emerald-500 font-medium">{emp.actualTime}</p>
-                      <p className="text-gray-500 text-sm">Expected: {emp.expectedTime}</p>
+                      <p className="text-white text-sm">Expected: {emp.expectedTime}</p>
                     </div>
                   </div>
                 ))}
@@ -468,11 +468,11 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
                   <div key={index} className="flex items-center justify-between p-2 bg-red-900/20 rounded border border-red-500/30">
                     <div>
                       <p className="text-[#d4af37] font-medium">{emp.employeeName}</p>
-                      <p className="text-gray-400 text-sm">{emp.employeeDepartment}</p>
+                      <p className="text-white text-sm">{emp.employeeDepartment}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-red-500 font-medium">{emp.actualTime}</p>
-                      <p className="text-gray-500 text-sm">Expected: {emp.expectedTime}</p>
+                      <p className="text-white text-sm">Expected: {emp.expectedTime}</p>
                     </div>
                   </div>
                 ))}
@@ -494,7 +494,7 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
                   className="flex flex-col items-center justify-center p-4 border border-[#d4af37]/30 rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-colors"
                 >
                   <Users className="w-6 h-6 text-[#d4af37] mb-2" />
-                  <span className="text-gray-300 text-sm">Add Employee</span>
+                  <span className="text-white text-sm">Add Employee</span>
                 </button>
               )}
               <button
@@ -502,14 +502,14 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
                 className="flex flex-col items-center justify-center p-4 border border-[#d4af37]/30 rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-colors"
               >
                 <Calendar className="w-6 h-6 text-[#d4af37] mb-2" />
-                <span className="text-gray-300 text-sm">Mark Attendance</span>
+                <span className="text-white text-sm">Mark Attendance</span>
               </button>
               <button
                 onClick={() => onNavigate?.('leaves')}
                 className="flex flex-col items-center justify-center p-4 border border-[#d4af37]/30 rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-colors"
               >
                 <FileText className="w-6 h-6 text-[#d4af37] mb-2" />
-                <span className="text-gray-300 text-sm">{isAdmin ? 'Review Leaves' : 'Apply for Leave'}</span>
+                <span className="text-white text-sm">{isAdmin ? 'Review Leaves' : 'Apply for Leave'}</span>
               </button>
               {(isAdmin || isManager) && (
                 <button
@@ -517,7 +517,7 @@ export function DashboardEnhanced({ onNavigate }: DashboardProps) {
                   className="flex flex-col items-center justify-center p-4 border border-[#d4af37]/30 rounded-lg hover:bg-[#d4af37]/10 hover:border-[#d4af37] transition-colors"
                 >
                   <Briefcase className="w-6 h-6 text-[#d4af37] mb-2" />
-                  <span className="text-gray-300 text-sm">Recruitment</span>
+                  <span className="text-white text-sm">Recruitment</span>
                 </button>
               )}
             </div>

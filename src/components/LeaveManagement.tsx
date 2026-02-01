@@ -200,8 +200,8 @@ export function LeaveManagement() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-gray-900">Leave Management</h1>
-          <p className="text-gray-500">Manage leave requests and balances</p>
+          <h1 className="text-white">Leave Management</h1>
+          <p className="text-white">Manage leave requests and balances</p>
         </div>
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
           <DialogTrigger asChild>
@@ -293,8 +293,8 @@ export function LeaveManagement() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Annual Leave</p>
-                <p className="text-gray-900">12 days</p>
+                <p className="text-white">Annual Leave</p>
+                <p className="text-white">12 days</p>
               </div>
               <Calendar className="w-8 h-8 text-blue-600" />
             </div>
@@ -304,8 +304,8 @@ export function LeaveManagement() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Sick Leave</p>
-                <p className="text-gray-900">8 days</p>
+                <p className="text-white">Sick Leave</p>
+                <p className="text-white">8 days</p>
               </div>
               <Calendar className="w-8 h-8 text-green-600" />
             </div>
@@ -315,8 +315,8 @@ export function LeaveManagement() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Used This Year</p>
-                <p className="text-gray-900">
+                <p className="text-white">Used This Year</p>
+                <p className="text-white">
                   {leaves.filter(l => l.status === 'approved').length} days
                 </p>
               </div>
@@ -328,8 +328,8 @@ export function LeaveManagement() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Pending</p>
-                <p className="text-gray-900">
+                <p className="text-white">Pending</p>
+                <p className="text-white">
                   {leaves.filter(l => l.status === 'pending').length}
                 </p>
               </div>
@@ -348,13 +348,13 @@ export function LeaveManagement() {
             <table className="w-full">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  <th className="px-6 py-3 text-left text-gray-600">Type</th>
-                  <th className="px-6 py-3 text-left text-gray-600">Duration</th>
-                  <th className="px-6 py-3 text-left text-gray-600">Days</th>
-                  <th className="px-6 py-3 text-left text-gray-600">Reason</th>
-                  <th className="px-6 py-3 text-left text-gray-600">Status</th>
-                  <th className="px-6 py-3 text-left text-gray-600">Applied</th>
-                  {isManager && <th className="px-6 py-3 text-left text-gray-600">Actions</th>}
+                  <th className="px-6 py-3 text-left text-white">Type</th>
+                  <th className="px-6 py-3 text-left text-white">Duration</th>
+                  <th className="px-6 py-3 text-left text-white">Days</th>
+                  <th className="px-6 py-3 text-left text-white">Reason</th>
+                  <th className="px-6 py-3 text-left text-white">Status</th>
+                  <th className="px-6 py-3 text-left text-white">Applied</th>
+                  {isManager && <th className="px-6 py-3 text-left text-white">Actions</th>}
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -363,19 +363,19 @@ export function LeaveManagement() {
                     <td className="px-6 py-4">
                       <Badge variant="outline">{getLeaveTypeLabel(leave.leaveType)}</Badge>
                     </td>
-                    <td className="px-6 py-4 text-gray-600">
+                    <td className="px-6 py-4 text-white">
                       {leave.startDate} - {leave.endDate}
                     </td>
-                    <td className="px-6 py-4 text-gray-900">
+                    <td className="px-6 py-4 text-white">
                       {calculateDays(leave.startDate, leave.endDate, leave.halfDay)}
                     </td>
-                    <td className="px-6 py-4 text-gray-600 max-w-xs truncate">
+                    <td className="px-6 py-4 text-white max-w-xs truncate">
                       {leave.reason}
                     </td>
                     <td className="px-6 py-4">
                       {getStatusBadge(leave.status)}
                     </td>
-                    <td className="px-6 py-4 text-gray-600">
+                    <td className="px-6 py-4 text-white">
                       {new Date(leave.appliedAt).toLocaleDateString()}
                     </td>
                     {isManager && (

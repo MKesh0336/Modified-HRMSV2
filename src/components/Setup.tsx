@@ -87,10 +87,10 @@ export function Setup() {
           </div>
           <div>
             <CardTitle className="text-[#d4af37]">Al Faiz Multinational Group</CardTitle>
-            <p className="text-gray-400 mt-2">
+            <p className="text-white mt-2">
               HRMS System - Initial Setup
             </p>
-            <p className="text-gray-500 text-sm mt-1">
+            <p className="text-white text-sm mt-1">
               Create your administrator account to get started
             </p>
           </div>
@@ -121,7 +121,7 @@ export function Setup() {
               )}
 
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-gray-300">Full Name</Label>
+                <Label htmlFor="name" className="text-white">Full Name</Label>
                 <Input
                   id="name"
                   type="text"
@@ -129,12 +129,12 @@ export function Setup() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-gray-300 placeholder:text-gray-600"
+                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-white placeholder:text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-gray-300">Email Address</Label>
+                <Label htmlFor="email" className="text-white">Email Address</Label>
                 <Input
                   id="email"
                   type="email"
@@ -142,12 +142,12 @@ export function Setup() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-gray-300 placeholder:text-gray-600"
+                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-white placeholder:text-white"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-gray-300">Password</Label>
+                <Label htmlFor="password" className="text-white">Password</Label>
                 <Input
                   id="password"
                   type="password"
@@ -155,13 +155,13 @@ export function Setup() {
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   required
-                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-gray-300 placeholder:text-gray-600"
+                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-white placeholder:text-white"
                 />
-                <p className="text-xs text-gray-500">Minimum 6 characters</p>
+                <p className="text-xs text-white">Minimum 6 characters</p>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="confirmPassword" className="text-gray-300">Confirm Password</Label>
+                <Label htmlFor="confirmPassword" className="text-white">Confirm Password</Label>
                 <Input
                   id="confirmPassword"
                   type="password"
@@ -169,12 +169,12 @@ export function Setup() {
                   value={formData.confirmPassword}
                   onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                   required
-                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-gray-300 placeholder:text-gray-600"
+                  className="bg-[#0a0a0a] border-[#d4af37]/30 text-white placeholder:text-white"
                 />
               </div>
 
               <div className="bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-lg p-3">
-                <p className="text-gray-300 text-sm">
+                <p className="text-white text-sm">
                   <strong className="text-[#d4af37]">Note:</strong> This will create the first administrator account. 
                   After setup, you can create additional users from the admin panel.
                 </p>

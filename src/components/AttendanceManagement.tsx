@@ -202,8 +202,8 @@ export function AttendanceManagement() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-gray-900">Attendance Management</h1>
-        <p className="text-gray-500">Track your work hours and attendance</p>
+        <h1 className="text-white">Attendance Management</h1>
+        <p className="text-white">Track your work hours and attendance</p>
       </div>
 
       {gpsError && (
@@ -226,8 +226,8 @@ export function AttendanceManagement() {
                 <div className="flex items-center justify-center mb-4">
                   <Clock className="w-16 h-16 text-indigo-600" />
                 </div>
-                <p className="text-center text-gray-600 mb-2">Current Time</p>
-                <p className="text-center text-gray-900 mb-4">
+                <p className="text-center text-white mb-2">Current Time</p>
+                <p className="text-center text-white mb-4">
                   {new Date().toLocaleTimeString('en-US', {
                     hour: '2-digit',
                     minute: '2-digit',
@@ -292,20 +292,20 @@ export function AttendanceManagement() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">Present Days</span>
-                <span className="text-gray-900">{attendanceRecords.length}</span>
+                <span className="text-white">Present Days</span>
+                <span className="text-white">{attendanceRecords.length}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">Total Hours</span>
-                <span className="text-gray-900">
+                <span className="text-white">Total Hours</span>
+                <span className="text-white">
                   {attendanceRecords
                     .reduce((sum, record) => sum + (record.totalHours || 0), 0)
                     .toFixed(1)}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-gray-600">Avg. Hours/Day</span>
-                <span className="text-gray-900">
+                <span className="text-white">Avg. Hours/Day</span>
+                <span className="text-white">
                   {attendanceRecords.length > 0
                     ? (attendanceRecords
                         .reduce((sum, record) => sum + (record.totalHours || 0), 0) /
@@ -355,8 +355,8 @@ export function AttendanceManagement() {
                         )}
                       </div>
                       <div>
-                        <p className="text-gray-900">{record.date}</p>
-                        <p className="text-gray-500">
+                        <p className="text-white">{record.date}</p>
+                        <p className="text-white">
                           {formatTime(record.checkIn)}
                           {record.checkOut && ` - ${formatTime(record.checkOut)}`}
                         </p>
@@ -367,7 +367,7 @@ export function AttendanceManagement() {
                         {record.checkOut ? 'Complete' : 'In Progress'}
                       </Badge>
                       {record.totalHours && (
-                        <p className="text-gray-600 mt-1">
+                        <p className="text-white mt-1">
                           {record.totalHours}h
                         </p>
                       )}

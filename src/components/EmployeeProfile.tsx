@@ -84,10 +84,10 @@ export function EmployeeProfile({ employee, onBack, onUpdate }: EmployeeProfileP
 
   const InfoItem = ({ icon: Icon, label, value }: any) => (
     <div className="flex items-start space-x-3">
-      <Icon className="w-5 h-5 text-gray-400 mt-0.5" />
+      <Icon className="w-5 h-5 text-white mt-0.5" />
       <div>
-        <p className="text-gray-500">{label}</p>
-        <p className="text-gray-900">{value || '-'}</p>
+        <p className="text-white">{label}</p>
+        <p className="text-white">{value || '-'}</p>
       </div>
     </div>
   );
@@ -97,7 +97,7 @@ export function EmployeeProfile({ employee, onBack, onUpdate }: EmployeeProfileP
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+          className="flex items-center space-x-2 text-white hover:text-white"
         >
           <ArrowLeft className="w-5 h-5" />
           <span>Back to Directory</span>
@@ -135,8 +135,8 @@ export function EmployeeProfile({ employee, onBack, onUpdate }: EmployeeProfileP
                 </Avatar>
                 
                 <div>
-                  <h2 className="text-gray-900">{employee.name}</h2>
-                  <p className="text-gray-500">{employee.jobTitle || 'Employee'}</p>
+                  <h2 className="text-white">{employee.name}</h2>
+                  <p className="text-white">{employee.jobTitle || 'Employee'}</p>
                   {employee.department && (
                     <Badge variant="secondary" className="mt-2">
                       {employee.department}
@@ -152,12 +152,12 @@ export function EmployeeProfile({ employee, onBack, onUpdate }: EmployeeProfileP
                 </Badge>
 
                 <div className="w-full pt-4 space-y-3 border-t border-gray-200">
-                  <div className="flex items-center text-gray-600 space-x-2">
+                  <div className="flex items-center text-white space-x-2">
                     <Mail className="w-4 h-4" />
                     <span className="truncate">{employee.email}</span>
                   </div>
                   {employee.phoneNumber && (
-                    <div className="flex items-center text-gray-600 space-x-2">
+                    <div className="flex items-center text-white space-x-2">
                       <Phone className="w-4 h-4" />
                       <span>{employee.phoneNumber}</span>
                     </div>

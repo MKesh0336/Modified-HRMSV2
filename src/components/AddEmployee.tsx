@@ -125,12 +125,12 @@ export function AddEmployee({ onBack, onSuccess }: AddEmployeeProps) {
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
+          className="flex items-center space-x-2 text-white hover:text-white"
         >
           <ArrowLeft className="w-5 h-5" />
           <span>Back</span>
         </button>
-        <h1 className="text-gray-900">Add New Employee</h1>
+        <h1 className="text-white">Add New Employee</h1>
         <div className="w-20"></div>
       </div>
 

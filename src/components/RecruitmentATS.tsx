@@ -282,7 +282,7 @@ export function RecruitmentATS() {
       hired: 'bg-green-600 text-white',
       rejected: 'bg-red-100 text-red-800'
     };
-    return colors[stage] || 'bg-gray-100 text-gray-800';
+    return colors[stage] || 'bg-gray-100 text-white';
   };
 
   const isManager = user?.role === 'admin' || user?.role === 'manager';
@@ -303,8 +303,8 @@ export function RecruitmentATS() {
     <div className="space-y-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-gray-900">Recruitment</h1>
-          <p className="text-gray-500">{candidates.length} active candidates</p>
+          <h1 className="text-white">Recruitment</h1>
+          <p className="text-white">{candidates.length} active candidates</p>
         </div>
         
         <div className="flex items-center space-x-4">
@@ -328,8 +328,8 @@ export function RecruitmentATS() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Open Positions</p>
-                <p className="text-gray-900">{jobs.filter(j => j.status === 'open').length}</p>
+                <p className="text-white">Open Positions</p>
+                <p className="text-white">{jobs.filter(j => j.status === 'open').length}</p>
               </div>
               <Briefcase className="w-8 h-8 text-blue-600" />
             </div>
@@ -339,8 +339,8 @@ export function RecruitmentATS() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Total Candidates</p>
-                <p className="text-gray-900">{candidates.length}</p>
+                <p className="text-white">Total Candidates</p>
+                <p className="text-white">{candidates.length}</p>
               </div>
               <User className="w-8 h-8 text-green-600" />
             </div>
@@ -350,8 +350,8 @@ export function RecruitmentATS() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">In Interview</p>
-                <p className="text-gray-900">{candidates.filter(c => c.stage === 'interview').length}</p>
+                <p className="text-white">In Interview</p>
+                <p className="text-white">{candidates.filter(c => c.stage === 'interview').length}</p>
               </div>
               <User className="w-8 h-8 text-purple-600" />
             </div>
@@ -361,8 +361,8 @@ export function RecruitmentATS() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-gray-500">Offers Made</p>
-                <p className="text-gray-900">{candidates.filter(c => c.stage === 'offer').length}</p>
+                <p className="text-white">Offers Made</p>
+                <p className="text-white">{candidates.filter(c => c.stage === 'offer').length}</p>
               </div>
               <User className="w-8 h-8 text-yellow-600" />
             </div>
@@ -595,7 +595,7 @@ export function RecruitmentATS() {
               <Card key={job.id} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-gray-900">{job.title}</h3>
+                    <h3 className="text-white">{job.title}</h3>
                     {user?.role === 'admin' && (
                       <Button
                         variant="ghost"
@@ -606,7 +606,7 @@ export function RecruitmentATS() {
                       </Button>
                     )}
                   </div>
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-white">
                     <p>{job.department}</p>
                     <p>{job.location}</p>
                     <Badge variant="secondary">{job.type}</Badge>
@@ -619,12 +619,12 @@ export function RecruitmentATS() {
             ))}
           </div>
 
-          <h3 className="text-gray-900 mb-4">Candidate Pipeline</h3>
+          <h3 className="text-white mb-4">Candidate Pipeline</h3>
           <div className="space-y-6">
             {stages.map((stage) => (
               <div key={stage}>
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-gray-700 capitalize">{stage}</h4>
+                  <h4 className="text-white capitalize">{stage}</h4>
                   <Badge className={getStageBadgeColor(stage)}>
                     {filteredCandidates.filter(c => c.stage === stage).length}
                   </Badge>
@@ -639,11 +639,11 @@ export function RecruitmentATS() {
                           <CardContent className="p-4">
                             <div className="flex items-start justify-between mb-2">
                               <div>
-                                <p className="text-gray-900">{candidate.name}</p>
-                                <p className="text-gray-500">{job?.title}</p>
+                                <p className="text-white">{candidate.name}</p>
+                                <p className="text-white">{job?.title}</p>
                               </div>
                             </div>
-                            <div className="space-y-1 text-gray-600 mb-3">
+                            <div className="space-y-1 text-white mb-3">
                               <div className="flex items-center space-x-2">
                                 <Mail className="w-4 h-4" />
                                 <span className="truncate">{candidate.email}</span>
